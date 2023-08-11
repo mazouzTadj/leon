@@ -424,6 +424,15 @@ transform: translate(-50%, -50%);
     margin-left: 10px;
     color: var(--secondary-color);
   }
+  .contact .info .social a:first-child i:hover{
+    color: #ff0000;
+  }
+  .contact .info .social a:nth-child(2) i:hover{
+    color: #087cea;
+  }
+  .contact .info .social a:last-child i:hover{
+    color: #1da1f2;
+  }
   @media (max-width: 767px){
     .contact .info .lable, .contact .info .link {
         font-size: 25px;
