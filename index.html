@@ -19,14 +19,14 @@
 <body>
     
     <!-- start Header -->
-    <div class="header">
+    <div class="header" >
         <div class="container">
             <img class="logo" src="images/logo.png" alt="">
-            <div class="links" onclick="un()">  
+            <div class="links"  onclick="openLinks()">  
                 <span class="icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span id="lin1"></span>
+                    <span id="lin2"></span>
+                    <span id="lin3"></span>
                 </span>
                 <ul id="ul">
                     <li><a href="#services">Services</a></li>
@@ -39,7 +39,7 @@
     </div>
     <!-- end Header -->
     <!-- start landing section -->
-    <div class="landing">
+    <div class="landing" onclick="closeLinks()">
         <div class="intro-text">
             <h1>Hello There</h1>
             <p>We are Leon - Super Creative & Minimal Agency Web Template</p>
@@ -180,12 +180,40 @@
             </div>
         </div>
     </div>
-<!-- End about -->
-<!--  start footer -->
-<div class="footer">
-    &copy; 2021 <span>Leon</span> All Right Reserved
-</div>
-<!--  end footer -->
+    <!-- End about -->
+    <!--  start footer -->
+    <div class="footer">
+        &copy; 2021 <span>Leon</span> All Right Reserved
+    </div>
+    <!--  end footer -->
 
+    <script>
+        let links = document.getElementById("ul");
+        let links1 = document.getElementById("lin1");
+        let links2 = document.getElementById("lin2");
+        let links3 = document.getElementById("lin3");
+
+        openLinks = () => {
+        if(links.style.transform === 'rotate3d(1, 0, 0, 90deg)'){
+            links.style.transform = "rotate3d(1,0,0, 0deg)" ;
+            links1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+            links2.style.transform = 'rotate(45deg)';
+            links3.style.transform = 'rotate(-45deg) translate(4px, -5px)';
+        }else{
+            links.style.transform = "rotate3d(1, 0, 0, 90deg)";
+            links1.style.transform = 'rotate(0deg) translate(0px, 0px)';
+            links2.style.transform = 'rotate(0deg)';
+            links3.style.transform = 'rotate(0deg) translate(0px, 0px)';
+        }
+    }
+        closeLinks = () => {
+        if(links.style.transform === 'rotate3d(1, 0, 0, 0deg)'){
+            links.style.transform = "rotate3d(1, 0, 0, 90deg)";
+            links1.style.transform = 'rotate(0deg) translate(0px, 0px)';
+            links2.style.transform = 'rotate(0deg)';
+            links3.style.transform = 'rotate(0deg) translate(0px, 0px)';
+        }
+    }
+        </script>
 </body>
 </html>
